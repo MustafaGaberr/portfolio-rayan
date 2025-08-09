@@ -1,0 +1,200 @@
+/* Local fonts: Readex Pro */
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('./resources/fonts/ReadexPro-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('./resources/fonts/ReadexPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('./resources/fonts/ReadexPro-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-gold: #D4AF37;
+  --deep-black: #1a1a1a;
+  --soft-black: #2c2c2c;
+  --light-gray: #f8f9fa;
+  --text-gray: #6c757d;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Readex Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: var(--deep-black);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.text-gold {
+  color: var(--primary-gold);
+}
+
+.bg-gold {
+  background-color: var(--primary-gold);
+}
+
+.bg-deep-black {
+  background-color: var(--deep-black);
+}
+
+.bg-soft-black {
+  background-color: var(--soft-black);
+}
+
+.transition-smooth {
+  transition: all 0.3s ease;
+}
+
+.btn-gold {
+  background-color: var(--primary-gold);
+  color: var(--white);
+  border: 2px solid var(--primary-gold);
+  padding: 12px 32px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: transparent;
+  color: var(--primary-gold);
+  border: 2px solid var(--primary-gold);
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  color: var(--primary-gold);
+  border: 2px solid var(--primary-gold);
+  padding: 12px 32px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--primary-gold);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.luxury-shadow {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, var(--primary-gold), #b8941f);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8941f;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+  
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
+/* Smooth anchor offset for sticky navbar */
+section, .hero-section {
+  scroll-margin-top: 90px;
+}
+
+/* Navbar hover states */
+.navbar .nav-link:hover {
+  color: var(--primary-gold) !important;
+}
+
+.navbar-brand {
+  color: var(--white) !important;
+}
+
+.navbar-brand:hover {
+  color: var(--primary-gold) !important;
+}
+
+/* Footer link hover to white */
+footer a {
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--white) !important;
+}
