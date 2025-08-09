@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect, useMemo, useState } from '
 const translations = {
     en: {
         nav: { home: 'Home', about: 'About', portfolio: 'Portfolio', partners: 'Partners', testimonials: 'Testimonials', contact: 'Contact' },
-        hero: { tagline: "Creating Premium Advertising Campaigns for Elite Sports Clubs Across Saudi Arabia", viewPortfolio: 'View Portfolio', getInTouch: 'Get in Touch' },
+        hero: { brandName: "RAYAN ALNJEM", tagline: "Creating Premium Advertising Campaigns for Elite Sports Clubs Across Saudi Arabia", viewPortfolio: 'View Portfolio', getInTouch: 'Get in Touch' },
         about: {
             heading: 'About Us',
             blurb: 'We craft premium visual stories and advertising campaigns tailored for elite sports clubs across Saudi Arabia. Our work blends cinematic production quality with data-informed strategy to deliver measurable impact.',
@@ -15,7 +15,7 @@ const translations = {
         testimonials: { heading: 'Client Testimonials', sub: 'What elite sports organizations say about our premium campaigns', trustedBy: 'Trusted by Elite Clients' },
         contact: {
             heading: 'Get in Touch', sub: "Ready to elevate your sports organization with premium advertising campaigns? Let's discuss your next project.",
-            startYourProject: 'Start Your Project',
+            startYourProject: 'Start Your Project Now',
             fullName: 'Full Name', email: 'Email Address', projectType: 'Project Type', projectDetails: 'Project Details', placeholder: 'Tell me about your project goals, timeline, and vision...', send: 'Send Message', followWork: 'Follow My Work'
         },
         modal: { client: 'Client', year: 'Year', category: 'Category', highlights: 'Project Highlights', h1: 'Premium cinematography and editing', h2: 'Multi-platform campaign delivery', h3: 'Arabic and English versions', h4: 'Social media optimization' },
@@ -23,7 +23,7 @@ const translations = {
     },
     ar: {
         nav: { home: 'الرئيسية', about: 'من نحن', portfolio: 'الأعمال', partners: 'شركاؤنا', testimonials: 'آراء العملاء', contact: 'تواصل' },
-        hero: { tagline: 'نصنع حملات إعلانية فاخرة للأندية الرياضية النخبوية في المملكة العربية السعودية', viewPortfolio: 'استعراض الأعمال', getInTouch: 'تواصل معنا' },
+        hero: { brandName: 'ريان النجم', tagline: 'نصنع حملات إعلانية فاخرة للأندية الرياضية النخبوية في المملكة العربية السعودية', viewPortfolio: 'استعراض الأعمال', getInTouch: 'تواصل معنا' },
         about: {
             heading: 'من نحن',
             blurb: 'نبتكر قصصًا بصريّة فاخرة وحملات إعلانية مخصّصة للأندية الرياضية في السعودية، بجودة إنتاج سينمائي واستراتيجية مدروسة لتحقيق أثر ملموس.',
@@ -35,7 +35,7 @@ const translations = {
         testimonials: { heading: 'آراء العملاء', sub: 'ماذا تقول الجهات الرياضية عن حملاتنا المتميّزة', trustedBy: 'موضع ثقة عملاء نخبة' },
         contact: {
             heading: 'تواصل معنا', sub: 'هل أنت مستعد للارتقاء بمنظمتك الرياضية عبر حملات إعلانية فاخرة؟ لنتحدث عن مشروعك القادم.',
-            startYourProject: 'ابدأ مشروعك',
+            startYourProject: 'ابدأ مشروعك الآن',
             fullName: 'الاسم الكامل', email: 'البريد الإلكتروني', projectType: 'نوع المشروع', projectDetails: 'تفاصيل المشروع', placeholder: 'أخبرني عن أهداف المشروع والجدول الزمني والرؤية...', send: 'إرسال الرسالة', followWork: 'تابع أعمالي'
         },
         modal: { client: 'العميل', year: 'السنة', category: 'الفئة', highlights: 'أبرز ملامح المشروع', h1: 'تصوير ومونتاج سينمائي', h2: 'تسليم متعدد المنصات', h3: 'نسختان عربية وإنجليزية', h4: 'تحسين لمنصات التواصل' },

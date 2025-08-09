@@ -169,12 +169,7 @@ const Contact = () => {
                                 boxShadow: '0 20px 60px rgba(0, 0, 0, 0.1)'
                             }}
                         >
-                            <h3
-                                className="fw-bold mb-4"
-                                style={{ fontFamily: 'Readex Pro, sans-serif' }}
-                            >
-                                Start Your Project
-                            </h3>
+
 
                             <Form onSubmit={handleSubmit}>
                                 <Row>

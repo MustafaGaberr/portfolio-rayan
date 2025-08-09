@@ -45,7 +45,7 @@ const Hero = () => {
                                         letterSpacing: '2px'
                                     }}
                                 >
-                                    RAYAN ALNJEM
+                                    {t('hero.brandName')}
                                 </h1>
                                 <div
                                     className="mx-auto mb-4"

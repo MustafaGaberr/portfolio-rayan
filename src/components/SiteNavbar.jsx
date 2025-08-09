@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
 import { useI18n } from '../i18n.jsx';
 
 const SiteNavbar = () => {
@@ -30,6 +30,11 @@ const SiteNavbar = () => {
 
     const { t, lang, setLang } = useI18n();
 
+    const otherLang = lang === 'ar' ? 'en' : 'ar';
+    const currentFlagUrl = lang === 'ar' ? 'https://flagcdn.com/w40/sa.png' : 'https://flagcdn.com/w40/gb.png';
+    const otherFlagUrl = otherLang === 'ar' ? 'https://flagcdn.com/w40/sa.png' : 'https://flagcdn.com/w40/gb.png';
+    const otherLangLabel = otherLang === 'ar' ? 'العربية' : 'English';
+
     return (
         <Navbar
             ref={navbarRef}
@@ -55,14 +60,33 @@ const SiteNavbar = () => {
                         <Nav.Link href="#partners" className="text-white px-3 text-lg">{t('nav.partners')}</Nav.Link>
                         <Nav.Link href="#testimonials" className="text-white px-3 text-lg">{t('nav.testimonials')}</Nav.Link>
                         <Nav.Link href="#contact" className="text-white px-3 text-lg">{t('nav.contact')}</Nav.Link>
-                        <div className="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0" style={{ gap: '8px' }}>
-                            <button type="button" aria-label="Arabic" onClick={() => setLang('ar')} className="border-0 p-0 bg-transparent">
-                                <img src="https://flagcdn.com/w40/sa.png" alt="SA" style={{ width: '32px', height: '22px', objectFit: 'cover', borderRadius: '3px' }} />
-                            </button>
-                            <button type="button" aria-label="English" onClick={() => setLang('en')} className="border-0 p-0 bg-transparent">
-                                <img src="https://flagcdn.com/w40/gb.png" alt="UK" style={{ width: '32px', height: '22px', objectFit: 'cover', borderRadius: '3px' }} />
-                            </button>
-                        </div>
+                        <Dropdown align="end" className="lang-dropdown ms-3 ms-lg-4 mt-3 mt-lg-0">
+                            <Dropdown.Toggle
+                                id="language-switcher"
+                                aria-label={lang === 'ar' ? 'Arabic' : 'English'}
+                                className="border-0 bg-transparent d-flex align-items-center"
+                                style={{ boxShadow: 'none', padding: '6px 8px', borderRadius: '10px' }}
+                            >
+                                <img
+                                    src={currentFlagUrl}
+                                    alt={lang === 'ar' ? 'SA' : 'UK'}
+                                    style={{ width: '32px', height: '22px', objectFit: 'cover', borderRadius: '3px' }}
+                                />
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu className="p-0 overflow-hidden">
+                                <Dropdown.Item
+                                    onClick={() => setLang(otherLang)}
+                                    className="d-flex align-items-center gap-2"
+                                >
+                                    <img
+                                        src={otherFlagUrl}
+                                        alt={otherLang === 'ar' ? 'SA' : 'UK'}
+                                        style={{ width: '24px', height: '16px', objectFit: 'cover', borderRadius: '2px' }}
+                                    />
+                                    <span>{otherLangLabel}</span>
+                                </Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

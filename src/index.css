@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Hide caret for the language dropdown toggle so only the flag is visible */
+#language-switcher::after {
+  display: none !important;
+}
+
+/* Luxurious language dropdown styles */
+.lang-dropdown .dropdown-toggle {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important; /* var(--primary-gold) at 35% */
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.lang-dropdown .dropdown-toggle:hover,
+.lang-dropdown .dropdown-toggle:focus,
+.lang-dropdown.show .dropdown-toggle {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: var(--primary-gold) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+}
+
+.lang-dropdown .dropdown-menu {
+  min-width: 160px;
+  background: #1f1f1f; /* deep dark to match theme */
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  margin-top: 10px;
+  padding: 6px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.lang-dropdown .dropdown-item {
+  color: #eaeaea;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.lang-dropdown .dropdown-item:hover,
+.lang-dropdown .dropdown-item:focus {
+  background: rgba(212, 175, 55, 0.12);
+  color: #ffffff;
+}
